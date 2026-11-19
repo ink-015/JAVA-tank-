@@ -1,17 +1,23 @@
+# 坦克大战地图（每格 34x34，坐标从 0 开始）
+# 格式：类型=列,行
+# 基础类型：brick 砖块 / stone 石头 / water 水 / grass 草丛
+# 装饰类型：strong 加固 / bomb 炸药 / gift 惊喜，可以用 + 叠加，越靠前越先套
+#   例：brick+strong+bomb 表示“会炸的加固砖”
+# 空行和 # 开头的行会被 Map 直接跳过
 brick=5,4
-brick=6,4
+brick+bomb=6,4
 brick=7,4
 brick=8,4
 brick=9,4
 brick=5,5
 brick=6,5
-brick=7,5
+brick+strong=7,5
 brick=8,5
 brick=9,5
 brick=5,6
 brick=6,6
 brick=7,6
-brick=8,6
+brick+gift=8,6
 brick=9,6
 brick=5,10
 brick=6,10
@@ -20,7 +26,7 @@ brick=8,10
 brick=9,10
 brick=5,11
 brick=6,11
-brick=7,11
+brick+bomb+gift=7,11
 brick=8,11
 brick=9,11
 brick=5,12
@@ -29,13 +35,13 @@ brick=7,12
 brick=8,12
 brick=9,12
 brick=15,4
-brick=16,4
+brick+gift=16,4
 brick=17,4
 brick=18,4
 brick=19,4
 brick=15,5
 brick=16,5
-brick=17,5
+brick+strong+bomb=17,5
 brick=18,5
 brick=19,5
 brick=15,6
@@ -50,7 +56,7 @@ brick=18,10
 brick=19,10
 brick=15,11
 brick=16,11
-brick=17,11
+brick+strong=17,11
 brick=18,11
 brick=19,11
 brick=15,12

@@ -6,7 +6,12 @@ public class File extends FolderItem{
     }
     private String extension;
     private int size;
-    public void printAll(){
+
+    @Override
+    public void printAll(int level){
+        for(int i=0;i<level;++i){
+            System.out.print("----");
+        }
         System.out.println(name);
     }
 }

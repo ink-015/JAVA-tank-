@@ -2,19 +2,19 @@ package game2025;
 
 import java.awt.Graphics;
 
-public class BlockGrass extends Block{
+/** 草丛：不挡子弹，相当于给对手做掩护 */
+public class BlockGrass extends Block {
 
 	public BlockGrass(int x, int y) {
 		super(x, y);
-		// TODO Auto-generated constructor stub
+		hp = -1;
+		blocksBullet = false;
 	}
 
 	@Override
 	public void draw(Graphics g) {
-		// TODO Auto-generated method stub
-		g.drawImage(Resourse.getInstance().getImg(), x, y, x+34, y+34,
-				4*34    , 7*34, 
+		g.drawImage(Resourse.getImg(), x, y, x+34, y+34,
+				4*34    , 7*34,
 				5*34 , 8*34, null);
 	}
-
 }
