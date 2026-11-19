@@ -11,3 +11,6 @@ out/
 ### 系统 ###
 .DS_Store
 Thumbs.db
+
+### 工程内的工作记录，不进版本库 ###
+.workbuddy/
